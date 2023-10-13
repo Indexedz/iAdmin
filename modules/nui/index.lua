@@ -1,5 +1,7 @@
 local module = {}
 
+RegisterNuiCallback("hide", module.hide)
+
 function module.send(header, props)
   SendNUIMessage({
     header = header,
@@ -24,10 +26,14 @@ function module.sends(data)
 end
 
 function module.show()
+  SetNuiFocus(true, true)
+  
   return module.send("setNavigate", "primary")
 end
 
 function module.hide()
+  SetNuiFocus(false, false)
+
   return module.send("setNavigate", "hidden")
 end
 
