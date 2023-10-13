@@ -1,6 +1,10 @@
-local nui = import 'nui';
+RegisterNuiCallback("copy_vec_3", function()
+  local coords = GetEntityCoords(PlayerPedId())
+  lib.setClipboard(('vec(%s, %s, %s)'):format(coords.x, coords.y, coords.z))
+end)
 
-RegisterCommand("show", nui.show, false)
-RegisterCommand("hide", nui.hide, false)
-
-print("RUN")
+RegisterNuiCallback("copy_vec_4", function()
+  local coords = GetEntityCoords(PlayerPedId())
+  local heading = GetEntityHeading(PlayerPedId())
+  lib.setClipboard(('vec(%s, %s, %s, %s)'):format(coords.x, coords.y, coords.z, heading))
+end)
