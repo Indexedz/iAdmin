@@ -6,7 +6,7 @@ function Primary() {
   }
 
   return (
-    <div className="w-fit px-5 py-1 mx-auto">
+    <div className="w-fit px-5 py-1 mx-auto mt-6">
       <div>
         <div>
           <ul className="space-y-1">
