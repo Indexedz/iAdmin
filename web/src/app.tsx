@@ -6,7 +6,7 @@ import Primary from './pages/Primary'
 
 function App() {
   return (
-    <NavigationProvider default="primary">
+    <NavigationProvider default="hidden">
       <Route name="primary" element={<Primary />} />
     </NavigationProvider>
   )
